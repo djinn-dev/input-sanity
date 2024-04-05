@@ -16,7 +16,8 @@
 		"files": []
 	},
 	"require": {
-		"php": ">=8.1"
+		"php": ">=8.1",
+		"djinn-dev/tool-basics": "*"
 	},
 	"require-dev": {}
 }
