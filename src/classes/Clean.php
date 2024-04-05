@@ -2,10 +2,9 @@
 
 namespace DjinnDev\InputSanity;
 
-use \DjinnDev\InputSanity\Abstracts\Base;
 use \DjinnDev\InputSanity\Checks;
 
-class Clean extends Base
+class Clean
 {
     /**
      * Public.
@@ -180,7 +179,7 @@ class Clean extends Base
 			return false;
 		}
 
-        $dtTool = new DateTime();
+        $dtTool = new \DateTime();
 		if(Checks::isTimestamp($value))
 		{
 			$dtTool->setTimestamp($value);

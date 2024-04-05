@@ -2,9 +2,7 @@
 
 namespace DjinnDev\InputSanity;
 
-use \DjinnDev\InputSanity\Abstracts\Base;
-
-class Checks extends Base
+class Checks
 {
     /**
      * Public.
@@ -18,6 +16,13 @@ class Checks extends Base
 		return (false === mb_detect_encoding((string) $value, null, true));
 	}
 
+	/**
+	 * Public.
+	 * Check if value is a valid timestamp.
+	 * 
+	 * @param mixed $value
+	 * @return bool
+	 */
 	public static function isTimestamp($value): bool
 	{
 		if(is_int($value))
@@ -27,7 +32,7 @@ class Checks extends Base
 		else
 		{
 			$isEqual = ((string) (int) $value === $value);
-			$value = parseInt($value);
+			$value = intval($value);
 		}
 
 		return ($isEqual && $value <= PHP_INT_MAX && $value >= ~PHP_INT_MAX);
