@@ -1,0 +1,22 @@
+{
+	"name": "djinn-dev/input-sanity",
+	"description": "A simple request handler for cleaning user inputs.",
+	"minimum-stability": "stable",
+	"license": "MIT",
+	"authors": [
+		{
+			"name": "Trevor Geene",
+			"email": "trevor.geene@gmail.com"
+		}
+	],
+	"autoload": {
+		"psr-4": {
+			"DjinnDev\\InputSanity\\": "src/classes/"
+		},
+		"files": []
+	},
+	"require": {
+		"php": ">=8.1"
+	},
+	"require-dev": {}
+}
